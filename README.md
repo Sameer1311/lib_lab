@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# 📚 Library Lab – Full Stack Book Management System
 
-First, run the development server:
+A modern full-stack Library Management System built with **Next.js**, **MongoDB**, and **Tailwind CSS**. It allows users to register, browse books, manage carts, and securely purchase or borrow books using **Razorpay integration**. Admins can manage inventory, users, and transactions with ease.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## Visit
+- https://liblab.netlify.app/
+---
+## 🔥 Features
+
+- 👤 User Authentication with **NextAuth.js**
+- 🛍️ Book Cart and Checkout System
+- 💳 **Razorpay** Payment Gateway Integration
+- 🧑‍💼 Admin Dashboard to Manage Books & Users
+- 🌙 Light/Dark Mode Support
+- 🔒 Route Protection & Middleware Setup
+- 📦 MongoDB + Mongoose Models for DB Management
+
+---
+
+## 🛠️ Tech Stack
+
+| Frontend        | Backend         | Auth & Payment        |
+|-----------------|------------------|------------------------|
+| Next.js         | MongoDB + Mongoose | NextAuth.js & Razorpay |
+| React           | REST API Routes  | JWT (Credentials Provider) |
+| Tailwind CSS    |                 |                        |
+
+---
+
+## ⚙️ Environment Variables
+
+Create a `.env.local` file in the root and add:
+
+```env
+# Public
+NEXT_PUBLIC_BOOKS_API_KEY=your_books_api_key
+NEXT_PUBLIC_RAZORPAY_TEST_KEY_ID=your_razorpay_key_id
+
+# Server-only
+MONGODB_URI=your_mongodb_uri
+NEXTAUTH_SECRET=your_auth_secret
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> ✅ NEVER push `.env.local` to GitHub
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📂 Project Structure
 
-## Learn More
+```
+.
+├── app/
+│   ├── api/                # Backend API routes
+│   ├── component/          # All frontend components
+│   ├── models/             # Mongoose models
+│   └── page.js             # Main landing page
+├── backend/                # Backend utilities
+├── public/                 # Static files (images, models)
+├── lib/                    # DB connection, helpers
+├── middleware.js           # Route protection
+├── next.config.mjs         # Next.js config
+└── .env.local              # Environment variables
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Getting Started
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Clone & Run Locally
 
-## Deploy on Vercel
+```bash
+git clone https://github.com/Sameer1311/lib_lab.git
+cd lib_lab
+npm install
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+> The app runs on `http://localhost:3000`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📦 Deployment
+
+You can deploy this app on [Vercel](https://vercel.com/) or [Render](https://render.com/).  
+**Make sure to set all required environment variables in your deployment settings.**
+
+---
+
+## 🙋‍♂️ Author
+
+**Sameer Negi**  
+📧 negisameer72@gmail.com
+🔗 [GitHub](https://github.com/Sameer1311)
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.  
+Feel free to use, fork, and contribute!
+
+---
